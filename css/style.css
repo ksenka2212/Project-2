@@ -1,28 +1,44 @@
 * {
     box-sizing:border-box;
-    padding: 0;
-    margin: 0;
-    }
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     line-height:25px;
-    color: #999999;
+    color: #999;
+}
+.img {
+    max-width:100%;
 }
 
 .container {
-    max-width:1110px;
+    max-width:1142px;
     margin:0 auto;
+    padding:0 16px;
 }
 
+.block-button {
+    display:inline-block;
+    color: #FFF;
+    text-decoration: none;
+    background: #4985FF;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+    border-radius: 30px;
+    padding:13px 36px 15px;    
+}
 /* main */
 .main-header {
     height:100vh;
     background-image: url(../img/group.jpg);    
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;     /*Вместить во всего родителя */
+    background-size: cover;
+    line-height: 20px;     /*Вместить во всего родителя */
+    /* background: url(../img/group.jpg) center/cover no-repeat;- более легкое свойство*/
 }
 
 .main-nav {
@@ -32,16 +48,17 @@ body {
 .main-menu {
     display:flex;
     justify-content: flex-end;
-    list-style-type:none; /*Чтобы убрать маркеры */
+    list-style:none; /*Чтобы убрать маркеры */
     padding: 0;   
 }
 
 .main-menu a {
+    display: block;
     text-decoration: none;
     color: white;
+    font-size:14px;
     border-bottom: 2px solid transparent; /*ПРОзрачный */
-    padding: 40px 20px;
-    display: block;
+    padding: 20px 10px;  
 }
 
  .main-menu a:hover {
@@ -52,69 +69,92 @@ body {
     color:white;
     text-align: center;
     max-width: 829px;
-    padding:220px 0 325px 0;
+    padding:0 16px;
+    margin: 220px auto 0;
 }
 
 .zagolovok h1 {
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
+    padding: 0px;
+    margin: 0px;
 }
 
 .zagolovok h2 {
     font-weight: 800;
-    font-size: 48px;
-    line-height: 64px;
-    padding: 20px 0 50px 0;
+    font-size: 36px;
+    line-height: 44px;
+    margin: 20px 0 0;
 }
 
-.block-button {
-    color: #FFF;
-    text-decoration: none;
-    background: #4985FF;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
-    border-radius: 30px;
-    padding:15px 36px;
+.zagolovok a {
+    margin-top: 50px;
 }
+
+@media (min-width:768px) {
+    .main-menu a {
+        font-size:16px;
+        padding:30px 16px;
+    }
+     .zagolovok {
+        max-width: 888px;
+        padding: 0 24px;
+    }
+
+    .zagolovok h2 {
+        font-size: 48px;
+        line-height: 64px;
+    }
+}
+
+@media (min-width: 992px) {
+    .main-menu a {
+        padding: 40px 20px;
+    }
+    }
+
+
 /* mobile  */
 .mobile {
-    padding:110px 0 105px 0;
-    margin: 0 auto; 
-    display:flex;
-    flex-direction: column;   
+    padding-top: 100px;
+    padding-bottom: 100px; 
+    text-align:center; 
 }
 
-.main-mobile {
-    width:739px;
-    text-align: center;
+.mobile h2 {
+    max-width:740px;
     margin: 0 auto;
-}
-
-.main-mobile h2 {
     color: #323232;
     font-weight: bold;
-    font-size: 36px;
-    line-height: 53px;
-    margin-bottom: 50px;
+    font-size: 30px;
+    line-height: 44px;
+    padding: 0;
 }
 
+.mobile-text {
+    max-width: 730px;
+    margin: 42px auto 0;
+}
+
+@media (min-width:768px) {
+    .mobile h2 {
+        font-size: 36px;
+        line-height: 52px;    
+    }
+}
 .opportunities {
-    display: flex;
     list-style-type:none;
-    justify-content: space-between;
-    margin-top:70px;
-    margin-bottom: 50px;
-    align-items: center;
+    margin:62px 0 0;
+    padding:0;
 }
 
 .button {
-    align-self:center;  
-}
+    margin-top: 48px;
+    }  
 
 .vector {
+    flex-shrink:0;
     width: 90px;
     height: 90px;
     box-sizing: border-box;
@@ -124,27 +164,61 @@ body {
     border: 1px solid #4985FF;
     border-radius: 50%;
     box-shadow: 0 0 0 9px #fff, 0 0 0 10px #E0E0E0;
+    margin:10px 26px 10px 10px;
 }
-  
+
+.opportunities li + .opportunities li {
+    margin-top:20px;
+}
 .vector img {
     display: block;
 }
 
 .opportunities li {
     display: flex;
+    align-items: center;
 }
 
 .opportunities-block {
-    margin-left: 27px;
-    width: 222px;
-    padding-top:38px;
+    text-align: left;
+    margin-top:50px;
+    line-height: 22px;
 }
 
 .creation {
     font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;  
+    font-size: 18px;  
     color: #000000;
+    padding: 0;
+    margin:0;
+}
+.opportunities-block p {
+    font-size: 14px;    
+}
+
+@media (min-width: 980px) {
+    .opportunities {
+        display: flex;
+    }
+
+    .opportunities li {
+        align-items: flex-start;
+    }
+
+    .opportunities li + .opportunities li {
+        margin-top: 0px;
+        margin-left: 14px;
+    }   
+
+    .opportunities-block {
+        margin-top: 46px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .opportunities li + .opportunities li {
+        margin-left: 30px;
+    }   
 }
 /* !mobile  */
 
@@ -271,8 +345,7 @@ body {
     font-size: 16px;
     line-height: 20px;
     text-decoration-line: underline;
-    color: #4985FF;
-   
+    color: #4985FF;   
 }
 /* !no-main-block */
 /* promo-block */
@@ -303,6 +376,9 @@ body {
     list-style: none;
     margin-bottom: 50px;
 }
+.promo-block img {
+    border-radius: 10px;
+}
 /* !promo-block */
 
 /* video-block */
@@ -326,14 +402,14 @@ body {
 }
 
 .button-video {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/buildings.jpg);
-    box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+    background: url(../img/buildings.jpg);
     border-radius: 10px;
     background-repeat: no-repeat;
     background-position: center;
     width: 970px;
     height: 430px;
-    margin-top:70px; 
+    margin-top:70px;
+    border: 0px; 
 }
 
 .button-video::after { 
@@ -355,23 +431,35 @@ body {
     margin-bottom:20px;
 }  
 
+
 .forma-block p {
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
     margin-bottom: 30px;
 }
+
+.forma-block span {
+    font-size: 13px;
+    line-height: 21px;
+    text-align: center;
+  }
 
 .main-form {
     margin:0 auto;
     display: flex;
     width:489px;
-    margin-bottom: 30px;    
+    margin-bottom: 30px;  
+      
 }
 
 .email {
     display:block;
-    padding: 15px 149px 13px 33px;
+    padding: 15px 80px 13px 33px;
     border-radius: 30px 0 0 30px;
     border: 1px solid #F2F2F2;
     box-sizing: border-box; 
+    box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
 }
 
 .forma-textblock {
@@ -380,6 +468,8 @@ body {
     background: #4985FF;
     border-radius: 0px 30px 30px 0px;
     color:white;
+    border:0px;
+    box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
 } 
 /* contacts */
 .contacts {
@@ -410,19 +500,24 @@ body {
 .contacts-block ul li{
     list-style: none;
     margin-bottom: 30px;
-      
+    display: flex;  
+    align-items: center;
+}
+.contacts-block span {
+    margin-left: 17px;
 }
 
+.for-contacts li{
+    display:flex;
+    align-items: center;
+}
 .for-contacts a {
     text-decoration:none;
     font-weight: normal;
     font-size: 14px;
     line-height: 22px;
-    color: #999; 
-}
-
-.for-contacts li::before {
-    content:">";
+    color: #999;
+    margin-left: 12px; 
 }
 
 .contacts p {
